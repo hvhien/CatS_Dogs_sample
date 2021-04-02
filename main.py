@@ -20,14 +20,14 @@ def config_image(img):
 st.write("\n")
 
 
-st.sidebar.title("upload inmage")
+st.title("upload inmage")
 st.set_option('deprecation.showfileUploaderEncoding',False)
-upload_file=st.sidebar.file_uploader(" ",type=["jpg","png","jpeg"])
+upload_file=st.file_uploader(" ",type=["jpg","png","jpeg"])
 
-if st.sidebar.button("click here to classifi"):
+if st.button("click here to classifi"):
     if upload_file is None:
 
-        st.sidebar.write("please upload file before")
+        st.write("please upload file before")
     else:
         img = Image.open(upload_file)
         st.image(img, use_column_width=False, width=300)
